@@ -1,0 +1,166 @@
+@import "tailwindcss/preflight";
+@tailwind utilities;
+
+/* =========================================================
+   🎨 DESIGN GLOBAL - MATRIX / LIQUID GLASS / GLOW
+   ========================================================= */
+
+/* --- Font & Layout général --- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'JetBrains Mono', monospace;
+  background-color: black;
+  color: #0f0;
+  overflow-x: hidden;
+}
+
+/* --- Transitions douces globales --- */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* --- Glow text général --- */
+.drop-shadow-glow {
+  text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 40px #00ff99;
+}
+
+/* --- Curseur clignotant --- */
+@keyframes blink {
+  50% { opacity: 0; }
+}
+.cursor {
+  display: inline-block;
+  width: 0.6ch;
+  background-color: #0f0;
+  animation: blink 1s step-start infinite;
+}
+
+/* =========================================================
+   💫 EFFETS SPÉCIAUX
+   ========================================================= */
+
+/* --- Glow pulsant --- */
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
+  }
+  50% {
+    text-shadow: 0 0 20px #0f0, 0 0 40px #0f0, 0 0 60px #0f0;
+  }
+}
+.glow-animation {
+  animation: glowPulse 2s infinite;
+}
+
+/* --- Fond flou (séparateur) --- */
+.backdrop-blur-xl {
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+}
+
+/* --- Liquid Glass (header glossy) --- */
+header {
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background-color: rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid rgba(0, 255, 100, 0.15);
+}
+
+/* =========================================================
+   🖥️ TERMINAL STYLE
+   ========================================================= */
+.terminal-container {
+  background-color: rgba(0,0,0,0.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 8px;
+  padding: 1rem;
+  width: 100vw;
+  max-width: 100%;
+  min-height: 300px;
+  height: 70vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+}
+
+/* --- Input Terminal --- */
+input.terminal-input {
+  background-color: rgba(0,0,0,0.3);
+  color: #0f0;
+  border: none;
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+  font-family: monospace;
+  font-size: 1rem;
+  width: 100%;
+}
+input.terminal-input:focus {
+  outline: none;
+  box-shadow: 0 0 10px #0f0;
+}
+
+/* =========================================================
+   💊 PAGE DES PILULES
+   ========================================================= */
+.pill-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  height: 100vh;
+}
+
+.pill {
+  width: 140px;
+  height: 70px;
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+/* --- Pilule rouge --- */
+.pill-red {
+  background: linear-gradient(45deg, #ff0000, #cc0000);
+  color: white;
+}
+.pill-red:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #ff0000;
+}
+
+/* --- Pilule bleue --- */
+.pill-blue {
+  background: linear-gradient(45deg, #007bff, #0056cc);
+  color: white;
+}
+.pill-blue:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #007bff;
+}
+
+/* =========================================================
+   🟩 FOND MATRIX ANIMÉ
+   ========================================================= */
+.matrix-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  background: black;
+}
