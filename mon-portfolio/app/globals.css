@@ -1,11 +1,5 @@
-@import "tailwindcss/preflight";
-@tailwind utilities;
+@import "tailwindcss";
 
-/* =========================================================
-   🎨 DESIGN GLOBAL - MATRIX / LIQUID GLASS / GLOW
-   ========================================================= */
-
-/* --- Font & Layout général --- */
 body {
   margin: 0;
   padding: 0;
@@ -14,18 +8,15 @@ body {
   color: #0f0;
   overflow-x: hidden;
 }
-
-/* --- Transitions douces globales --- */
 * {
   transition: all 0.3s ease-in-out;
 }
 
-/* --- Glow text général --- */
 .drop-shadow-glow {
   text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 40px #00ff99;
 }
 
-/* --- Curseur clignotant --- */
+
 @keyframes blink {
   50% { opacity: 0; }
 }
@@ -36,11 +27,6 @@ body {
   animation: blink 1s step-start infinite;
 }
 
-/* =========================================================
-   💫 EFFETS SPÉCIAUX
-   ========================================================= */
-
-/* --- Glow pulsant --- */
 @keyframes glowPulse {
   0%, 100% {
     text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
@@ -53,13 +39,12 @@ body {
   animation: glowPulse 2s infinite;
 }
 
-/* --- Fond flou (séparateur) --- */
+
 .backdrop-blur-xl {
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
 }
 
-/* --- Liquid Glass (header glossy) --- */
 header {
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
@@ -67,9 +52,6 @@ header {
   border-bottom: 1px solid rgba(0, 255, 100, 0.15);
 }
 
-/* =========================================================
-   🖥️ TERMINAL STYLE
-   ========================================================= */
 .terminal-container {
   background-color: rgba(0,0,0,0.3);
   backdrop-filter: blur(20px);
@@ -88,7 +70,6 @@ header {
   box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
 }
 
-/* --- Input Terminal --- */
 input.terminal-input {
   background-color: rgba(0,0,0,0.3);
   color: #0f0;
@@ -104,9 +85,6 @@ input.terminal-input:focus {
   box-shadow: 0 0 10px #0f0;
 }
 
-/* =========================================================
-   💊 PAGE DES PILULES
-   ========================================================= */
 .pill-container {
   display: flex;
   flex-direction: column;
@@ -131,7 +109,6 @@ input.terminal-input:focus {
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
-/* --- Pilule rouge --- */
 .pill-red {
   background: linear-gradient(45deg, #ff0000, #cc0000);
   color: white;
@@ -141,7 +118,6 @@ input.terminal-input:focus {
   box-shadow: 0 0 25px #ff0000;
 }
 
-/* --- Pilule bleue --- */
 .pill-blue {
   background: linear-gradient(45deg, #007bff, #0056cc);
   color: white;
@@ -151,9 +127,6 @@ input.terminal-input:focus {
   box-shadow: 0 0 25px #007bff;
 }
 
-/* =========================================================
-   🟩 FOND MATRIX ANIMÉ
-   ========================================================= */
 .matrix-bg {
   position: fixed;
   top: 0;

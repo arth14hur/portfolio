@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" className={spaceMono.className}> {/* Applique la police au root */}
+    <html className={spaceMono.className}>
       <body>{children}</body>
     </html>
   );

@@ -19,31 +19,69 @@ export default function Terminal() {
     switch (command) {
       case "help":
         return [
-          "📜 Available commands:",
-          "help - Show this message",
-          "about - About me",
-          "projects - Show my projects",
-          "contact - How to reach me",
-          "clear - Clear the terminal",
+          "Commandes disponible:",
+          "help - Montrer ce message",
+          "about - A propos de moi",
+          "projects - liste des projets que j'ai réaliser",
+          "contact - comment me contacter",
+          "clear - supprimer l'historique",
+          "Portfolio - détails du projet",
+          "Job board - détails du projet",
+          "Hangman - détails du projet",
+          "Skills - liste de mes compétances",
+          "techno - listes des techno que je connais"
         ];
       case "about":
         return [
-          "👨‍💻 I'm a passionate web developer who loves building creative and interactive experiences.",
-          "Currently working with Next.js, TypeScript and TailwindCSS.",
+          "Je suis étudiant à épitech et je désire apprendre d'avantage",
+          "En ce moment je travail sur Java en cours",
         ];
       case "projects":
         return [
-          "🚀 My recent projects:",
+          "Projets récents:",
           "- Portfolio Website",
-          "- 3D Web Playground",
-          "- Job Finder App",
-          "- Terminal UI",
+          "- Job board website",
+          "- Hangman game",
         ];
       case "contact":
         return [
-          "📬 You can contact me at:",
+          "You can contact me at:",
           "Email: arthur@example.com",
           "GitHub: github.com/arthurdaguier",
+        ];
+      case "Portfolio":
+        return [
+          "details of portfolio Website:",
+          "- Look at the Website",
+        ];
+      case "Job board":
+        return [
+          "Job board project:",
+          "- Job finder Website",
+        ];
+      case "Hangman":
+        return [
+          "Hangman game",
+        ];
+        case "skills":
+        return [
+          "My skills:",
+          "- Portfolio Website",
+          "- Job board website",
+          "- Hangman game",
+        ];
+        case "tecno":
+        return [
+          "les technos que j'ai déjà utilisés:",
+          "- Framework Nextjs",
+          "- Typescript",
+          "- Tailwind CSS",
+          "- html, js, CSS",
+          "- Nodejs et express",
+          "- Postgresql",
+          "- Python 3",
+          "- Java",
+          "- projets perso avec l'unreal engin 5"
         ];
       case "clear":
         setHistory([]);
