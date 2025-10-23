@@ -20,31 +20,75 @@ export default function Terminal() {
     switch (command) {
       case "help":
         return [
-          "📜 Available commands:",
-          "help - Show this message",
-          "about - About me",
-          "projects - Show my projects",
-          "contact - How to reach me",
-          "clear - Clear the terminal",
+          "Commandes disponibles:",
+          "help - montre ce message",
+          "about - A propos de moi",
+          "projects - liste des projets",
+          "contact - comment me contacter",
+          "Jobs - liste des postes occuper",
+          "portfolio - détail de ce projet",
+          "Joblinker - détail de ce projet",
+          "Hangman - détail de ce projet",
+          "techno - liste des techno que j'ai déjà utiliser",
+          "skills - liste de mes compétances",
+          "clear - supprimer l'historique",
         ];
       case "about":
         return [
-          "👨‍💻 I'm a passionate web developer who loves building creative and interactive experiences.",
-          "Currently working with Next.js, TypeScript and TailwindCSS.",
+          "Je Daguier Arthur étudiant en préMSC à Epitech",
+          "J'ai la volonté d'apprendre un maximum de choses au tour de l'informatique",
         ];
       case "projects":
         return [
-          "🚀 My recent projects:",
+          "Projets récents:",
           "- Portfolio Website",
-          "- 3D Web Playground",
-          "- Job Finder App",
-          "- Terminal UI",
+          "- Jeu 2D en Java",
+          "- Joblinker site web",
+          "- Hangman game",
+          
         ];
       case "contact":
         return [
-          "📬 You can contact me at:",
-          "Email: arthur@example.com",
-          "GitHub: github.com/arthurdaguier",
+          "Me contacter",
+          "Email: arthur.daguier@epitech.eu",
+          "GitHub: arth14hur",
+        ];
+        case "Jobs":
+        return [
+          "Expériences pros",
+          "Chaufeur livreur",
+          "entreprise: Feeling Express",
+          "",
+          "apprentis mécanicien agricole",
+          "entreprise: Atelier Chardine",
+        ];
+        case "portfolio":
+        return [
+          "C'est ce site",
+          "Je vous invite à l'explorer",
+        ];
+        case "Joblinker":
+        return [
+          "Projet web",
+          "jobboard fais en groupe pour nous apprendre l'organisation",
+          "utilisation de git et github en groupe",
+        ];
+        case "Hangman":
+        return [
+          "Mini projet en python",
+          "jeu du pendu en python en tant que premier projet",
+        ];
+        case "techno":
+        return [
+          "Mes technos",
+          "Python, Java, C++, et Unreal Engin 5",
+          "Javascript, Typescript, Postgresql, NodeJs, Express, Next"
+        ];
+        case "techno":
+        return [
+          "Mes compétances",
+          "relation client, rapport humain, rigueur",
+          "gestion d'entreprise, gestion demandes clients"
         ];
       case "clear":
         setHistory([]);
@@ -75,19 +119,19 @@ export default function Terminal() {
     setHistory((prev) => [cmd, ...prev]);
     setOutputs((prev) => [[], ...prev]);
 
-    // On anime chaque ligne une par une
+
     for (let i = 0; i < lines.length; i++) {
       let typed = "";
       for (let j = 0; j < lines[i].length; j++) {
         typed += lines[i][j];
-        await new Promise((r) => setTimeout(r, 15)); // vitesse par caractère
+        await new Promise((r) => setTimeout(r, 15));
         setOutputs((prev) => {
           const updated = [...prev];
           updated[0][i] = typed;
           return [...updated];
         });
       }
-      await new Promise((r) => setTimeout(r, 200)); // délai entre lignes
+      await new Promise((r) => setTimeout(r, 200));
     }
 
     setIsProcessing(false);
@@ -117,7 +161,7 @@ export default function Terminal() {
       onClick={() => terminalRef.current?.focus()}
       className="terminal-container no-outline select-none flex flex-col justify-end"
     >
-      {/* Zone d'affichage (ordre inversé pour outputs récents en haut) */}
+
       <div className="flex flex-col-reverse overflow-y-auto flex-grow space-y-2 space-y-reverse">
         {history.map((cmd, idx) => (
           <div key={idx}>
@@ -132,7 +176,7 @@ export default function Terminal() {
         ))}
       </div>
 
-      {/* Ligne d'entrée */}
+
       <div className="input-line mt-2 border-t border-green-800 pt-2 flex items-center">
         <span className="text-green-400">&gt;&nbsp;</span>
         <span>{currentInput}</span>

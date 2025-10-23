@@ -70,6 +70,10 @@ header {
   box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
 }
 
+.terminal-container:focus {
+  outline: none;
+}
+
 input.terminal-input {
   background-color: rgba(0,0,0,0.3);
   color: #0f0;
