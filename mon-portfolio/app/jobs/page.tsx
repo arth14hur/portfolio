@@ -1,47 +1,37 @@
-// app/jobs/page.tsx
+
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Link from 'next/link'; // Si tu veux ajouter des liens
+import Link from 'next/link';
 
-// --- Données des Expériences Professionnelles ---
-// Structure flexible : tu peux ajouter/modifier les champs
+
 const jobExperiences = [
   {
     id: 1,
-    company: 'Nom de l\'Entreprise 1',
-    role: 'Développeur Web Front-End',
-    period: 'Janvier 2023 - Présent',
-    location: 'Ville, Pays',
-    description: 'Responsable du développement et de la maintenance de l\'interface utilisateur pour [Nom du projet/produit]. Utilisation de React, Next.js, et TypeScript pour créer des expériences utilisateur performantes et accessibles.',
-    keyAchievements: [
-      'Amélioration de la vitesse de chargement de 25% en optimisant le code et les assets.',
-      'Mise en place d\'un système de design component-based avec Tailwind CSS.',
-      'Collaboration étroite avec les équipes backend et design pour livrer de nouvelles fonctionnalités.',
-    ],
-    techStack: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Git', 'Jest'],
+    company: 'Feeling Express',
+    role: 'Chauffeur livreur VL',
+    period: 'Janvier 2025 à Août 2025',
+    location: 'Ville, Bourguébus',
+    description: 'Charger du transport de produit pharmaceutique pour un client, la CERP',
   },
   {
     id: 2,
-    company: 'Nom de l\'Entreprise 2 (Stage)',
-    role: 'Stagiaire Développeur Full-Stack',
-    period: 'Mai 2022 - Août 2022',
-    location: 'Ville, Pays',
-    description: 'Participation au développement d\'une application web interne. Travail sur le front-end (Vue.js) et le back-end (Node.js, Express).',
+    company: 'Atelier Chardine',
+    role: 'Apprentis Mécanicien agricole',
+    period: 'Avril 2023 - Juin 2024',
+    location: 'Ville, Torigny sur Vire',
+    description: 'Apprentissage pour l\'obtention d\'un BTSA GDEA',
     keyAchievements: [
-      'Contribution à la création d\'une API RESTful pour la gestion des utilisateurs.',
-      'Développement de composants UI réutilisables.',
-      'Apprentissage des méthodologies Agile (Scrum).',
+      'Conception et réalisation d\'un outils de A à Z',
     ],
-    techStack: ['Vue.js', 'JavaScript', 'Node.js', 'Express', 'MongoDB', 'CSS'],
+    techStack: ['base de programmation de machines industriels'],
   },
-  // Ajoute d'autres expériences ici...
+
 ];
 
-// Tu peux aussi ajouter une section pour ton statut actuel
 const currentStatus = {
-  seeking: true, // Mettre à true si tu cherches activement
-  statusText: 'Actuellement en recherche active d\'opportunités stimulantes en tant que Développeur Web Front-End ou Full-Stack. Ouvert aux propositions sur Rennes et environs, ou en télétravail.',
-  contactLink: '/contact' // Lien vers ta page contact
+  seeking: true,
+  statusText: 'Actuellement en recherche active d\'opportunités d\'alternance dans les domaines de l\'IT',
+  contactLink: '/contact'
 };
 
 const JobsPage: NextPage = () => {
@@ -54,7 +44,7 @@ const JobsPage: NextPage = () => {
 
       {/* --- Conteneur Principal (Identique à /normal et /projects) --- */}
       <div className="relative bg-gradient-to-br from-terminal-dark via-black to-neutral-950 min-h-screen text-terminal-light-gray font-mono p-6 sm:p-10 lg:p-16 overflow-x-hidden">
-        
+        /10/2025 14:02
         {/* Grille de fond (Identique) */}
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-[0.04] pointer-events-none z-0"></div>
         

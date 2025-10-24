@@ -81,7 +81,7 @@ export default function Terminal() {
         case "techno":
         return [
           "Mes technos",
-          "Python, Java, C++, et Unreal Engin 5",
+          "Python, Java",
           "Javascript, Typescript, Postgresql, NodeJs, Express, Next"
         ];
         case "techno":
