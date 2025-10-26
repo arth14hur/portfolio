@@ -90,7 +90,7 @@ export default function HomePage() {
             onClick={() => router.push("/terminal")}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="w-56 h-56 md:w-64 md:h-64 rounded-full bg-red-500 shadow-lg shadow-red-500/50 hover:shadow-red-400/80 transition-all hidden md:flex"
+            className="w-56 h-56 md:w-64 md:h-64 rounded-full bg-red-500 shadow-lg shadow-red-500/50 hover:shadow-red-400/80 transition-all hidden md:flex items-center justify-center"
           >
             <span className="text-white font-bold text-5xl md:text-6xl text-center leading-tight">
               RED
