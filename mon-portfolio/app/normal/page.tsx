@@ -100,8 +100,8 @@ const PortfolioPage: NextPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project) => (
                 <Link
-                  key={project.id}
-                  href={`/projets/${project.id}`}
+                  key={project.title} // on peut utiliser le titre comme key si plus d'id
+                  href="/projects"
                   className="flex"
                 >
                   <article
