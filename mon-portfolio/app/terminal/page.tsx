@@ -6,7 +6,7 @@ import useTypingEffect from "@/Hooks/useTypingEffect";
 
 export default function HomePage() {
   const introText = useTypingEffect(
-    "Bienvenue dans mon univers. Je suis Arthur, développeur web passionné.",
+    "Bienvenue dans mon univers. Je suis Arthur, étudiant en informatique.",
     40
   );
 
