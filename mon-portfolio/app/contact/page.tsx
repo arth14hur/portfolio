@@ -72,7 +72,7 @@ const ContactPage: NextPage = () => {
         <div className="relative z-10 max-w-4xl mx-auto space-y-20 lg:space-y-24 pb-16">
           <header className="pt-6 md:pt-12 text-center">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-terminal-green mb-4 inline-block">
-              <span className="text-green-600 select-none mr-2">//</span> Contact
+              <span className="text-green-600 select-none mr-2">{'//'} Contact</span>
             </h1>
             <p className="text-xl md:text-2xl text-neutral-400 font-light max-w-2xl mx-auto">
               Une idée, un projet, une opportunité ? N’hésitez pas à me laisser un message.
@@ -100,11 +100,11 @@ const ContactPage: NextPage = () => {
 
           <section className="p-6 md:p-10 border border-neutral-700 rounded-lg bg-neutral-900/60 backdrop-blur-sm shadow-lg shadow-black/40">
             <h2 className="text-3xl font-semibold text-terminal-green mb-8 text-center">
-              <span className="text-green-600 select-none">#</span> Envoyer un message
+              <span className="text-green-600 select-none">{'#'} Envoyer un message</span>
             </h2>
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="flex flex-col">
-                <label htmlFor="name" className="text-green-500 font-medium mb-2">// Nom</label>
+                <label htmlFor="name" className="text-green-500 font-medium mb-2">{'// Nom'}</label>
                 <input
                   id="name"
                   type="text"
@@ -117,7 +117,7 @@ const ContactPage: NextPage = () => {
               </div>
 
               <div className="flex flex-col">
-                <label htmlFor="email" className="text-green-500 font-medium mb-2">// Email</label>
+                <label htmlFor="email" className="text-green-500 font-medium mb-2">{'// Email'}</label>
                 <input
                   id="email"
                   type="email"
@@ -130,7 +130,7 @@ const ContactPage: NextPage = () => {
               </div>
 
               <div className="flex flex-col">
-                <label htmlFor="message" className="text-green-500 font-medium mb-2">// Message</label>
+                <label htmlFor="message" className="text-green-500 font-medium mb-2">{'// Message'}</label>
                 <textarea
                   id="message"
                   rows={6}
@@ -157,7 +157,7 @@ const ContactPage: NextPage = () => {
           </section>
 
           <footer className="text-center text-sm text-neutral-600 pt-10">
-            &copy; {new Date().getFullYear()} Arthur Daguier // Tous droits réservés
+            &copy; {new Date().getFullYear()} Arthur Daguier {'// Tous droits réservés'}
           </footer>
         </div>
       </div>

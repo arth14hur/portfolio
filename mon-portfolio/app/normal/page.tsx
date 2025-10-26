@@ -8,7 +8,8 @@ const projects = [
     id: 1,
     title: 'Projet Hangman',
     description: 'Un petit jeu Hangman créé avec la bibliothèque Pygames',
-    longDescription: 'Ce projet visait à réutiliser les connaissances acquises pendant les deux premières semaines de formation à Epitech.',
+    longDescription:
+      'Ce projet visait à réutiliser les connaissances acquises pendant les deux premières semaines de formation à Epitech.',
     techStack: ['Python 3', 'Pygames'],
     liveLink: '#',
     repoLink: '#',
@@ -17,7 +18,8 @@ const projects = [
     id: 2,
     title: 'Job board',
     description: 'Projet de développement Web basé sur des sites comme Hello Work et consort',
-    longDescription: 'Projet visant à respecter un cahier des charges présenté sous forme d\'étapes de développement',
+    longDescription:
+      "Projet visant à respecter un cahier des charges présenté sous forme d&apos;étapes de développement",
     techStack: ['Next.js', 'TypeScript', 'Nodejs', 'Tailwind CSS', 'Postgresql', 'express'],
     liveLink: '#',
     repoLink: '#',
@@ -40,27 +42,23 @@ const contactLinks = [
   { name: 'GitHub:', value: 'arthur github', href: 'https://github.com' },
 ];
 
-
 const PortfolioPage: NextPage = () => {
   return (
     <>
       <Head>
         <title>Arthur Daguier - Portfolio</title>
-        <meta name="description" content="Portfolio d'Arthur Daguier, développeur web." />
+        <meta name="description" content="Portfolio d&apos;Arthur Daguier, développeur web." />
       </Head>
 
       <div className="relative bg-gradient-to-br from-terminal-dark via-black to-neutral-950 min-h-screen text-terminal-light-gray font-mono p-6 sm:p-10 lg:p-16 overflow-x-hidden">
-
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-[0.04] pointer-events-none z-0"></div>
 
         <div className="relative z-10 max-w-6xl mx-auto space-y-20 lg:space-y-28">
-
           <header className="pt-6 md:pt-12 space-y-8">
-
             <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10">
               <div className="flex-shrink-0">
                 <Image
-                  src="/profile-pic.jpg" 
+                  src="/profile-pic.jpg"
                   alt="Photo de Arthur Daguier"
                   width={150}
                   height={150}
@@ -75,7 +73,7 @@ const PortfolioPage: NextPage = () => {
             </div>
             <div className="text-xl sm:text-2xl text-neutral-300 leading-relaxed max-w-3xl font-light">
               <span className="text-terminal-green select-none mr-2">$&gt;</span>
-              Étudiant à Epitech Rennes, je suis passionné par l'informatique.
+              Étudiant à Epitech Rennes, je suis passionné par l&apos;informatique.
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 text-base pt-6 max-w-xl">
               {contactLinks.map((link) => (
@@ -93,6 +91,7 @@ const PortfolioPage: NextPage = () => {
               ))}
             </div>
           </header>
+
           <main className="space-y-10">
             <h2 className="text-4xl font-semibold text-terminal-green border-b-2 border-terminal-green/50 pb-3 flex items-center gap-3">
               <span className="text-terminal-green select-none text-3xl">#</span>
@@ -100,11 +99,7 @@ const PortfolioPage: NextPage = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project) => (
-                <Link
-                  key={project.id}
-                  href={`/projets/${project.id}`}
-                  className="flex"
-                >
+                <Link key={project.id} href={`/projets/${project.id}`} className="flex">
                   <article
                     className="relative p-6 border border-green-800 bg-neutral-900/40 rounded-md
                                hover:bg-neutral-800/60 hover:border-terminal-green
@@ -124,39 +119,73 @@ const PortfolioPage: NextPage = () => {
               ))}
             </div>
           </main>
+
           <footer className="space-y-12 pt-16 border-t border-neutral-700/50">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
               <div>
-                <h3 className="text-2xl font-semibold text-terminal-green mb-4 border-b border-green-800 pb-2">Compétences</h3>
+                <h3 className="text-2xl font-semibold text-terminal-green mb-4 border-b border-green-800 pb-2">
+                  Compétences
+                </h3>
                 <ul className="space-y-2 text-neutral-300 font-light list-inside">
-                  <li className="flex items-start gap-2"><span className="text-green-600 mt-1">&gt;</span> HTML, CSS, JavaScript, TypeScript</li>
-                  <li className="flex items-start gap-2"><span className="text-green-600 mt-1">&gt;</span> React, Next.js, Tailwind CSS</li>
-                  <li className="flex items-start gap-2"><span className="text-green-600 mt-1">&gt;</span> Node.js, Express, PostgreSQL</li>
-                  <li className="flex items-start gap-2"><span className="text-green-600 mt-1">&gt;</span> Python, bash, java</li>
-                  <li className="flex items-start gap-2"><span className="text-green-600 mt-1">&gt;</span> Git, Github</li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-1">&gt;</span> HTML, CSS, JavaScript, TypeScript
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-1">&gt;</span> React, Next.js, Tailwind CSS
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-1">&gt;</span> Node.js, Express, PostgreSQL
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-1">&gt;</span> Python, bash, java
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-1">&gt;</span> Git, Github
+                  </li>
                 </ul>
               </div>
+
               <div>
-                <h3 className="text-2xl font-semibold text-terminal-green mb-4 border-b border-green-800 pb-2">Progrès</h3>
+                <h3 className="text-2xl font-semibold text-terminal-green mb-4 border-b border-green-800 pb-2">
+                  Progrès
+                </h3>
                 <ul className="space-y-2 text-neutral-300 font-light list-inside">
-                  <li className="flex items-start gap-2"><span className="text-green-600 mt-1">&gt;</span> Design responsive & Accessibilité</li>
-                  <li className="flex items-start gap-2"><span className="text-green-600 mt-1">&gt;</span> Optimisation performances (Core Web Vitals)</li>
-                  <li className="flex items-start gap-2"><span className="text-green-600 mt-1">&gt;</span> Apprentissage des conventions git Karma et convention de code</li>
-                  <li className="flex items-start gap-2"><span className="text-green-600 mt-1">&gt;</span> Apprentissage de l'utilisation de git</li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-1">&gt;</span> Design responsive & Accessibilité
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-1">&gt;</span> Optimisation performances (Core Web Vitals)
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-1">&gt;</span> Apprentissage des conventions git Karma et convention de code
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-1">&gt;</span> Apprentissage de l&apos;utilisation de git
+                  </li>
                 </ul>
               </div>
+
               <div>
-                <h3 className="text-2xl font-semibold text-terminal-green mb-4 border-b border-green-800 pb-2">Défis Relevés</h3>
+                <h3 className="text-2xl font-semibold text-terminal-green mb-4 border-b border-green-800 pb-2">
+                  Défis Relevés
+                </h3>
                 <ul className="space-y-2 text-neutral-300 font-light list-inside">
-                  <li className="flex items-start gap-2"><span className="text-green-600 mt-1">&gt;</span> Construction d'un site web (front et back-end)</li>
-                  <li className="flex items-start gap-2"><span className="text-green-600 mt-1">&gt;</span> Gestion Base de Données postgres</li>
-                  <li className="flex items-start gap-2"><span className="text-green-600 mt-1">&gt;</span> Animations complexes(TypeScript)</li>
-                  <li className="flex items-start gap-2"><span className="text-green-600 mt-1">&gt;</span> Programmation Orientée Objet (java)</li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-1">&gt;</span> Construction d&apos;un site web (front et back-end)
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-1">&gt;</span> Gestion Base de Données postgres
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-1">&gt;</span> Animations complexes(TypeScript)
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-1">&gt;</span> Programmation Orientée Objet (java)
+                  </li>
                 </ul>
               </div>
             </div>
           </footer>
-
         </div>
       </div>
     </>

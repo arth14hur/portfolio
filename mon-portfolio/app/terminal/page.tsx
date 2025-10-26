@@ -10,7 +10,6 @@ export default function HomePage() {
     40
   );
 
-  // === Animation Matrix ===
   useEffect(() => {
     const canvas = document.getElementById("matrixCanvas") as HTMLCanvasElement;
     if (!canvas) return;
@@ -26,7 +25,7 @@ export default function HomePage() {
 
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     const fontSize = 16;
-    let columns = Math.floor(canvas.width / fontSize);
+    const columns = Math.floor(canvas.width / fontSize);
     const drops = Array(columns).fill(1);
 
     const draw = () => {
@@ -55,10 +54,9 @@ export default function HomePage() {
 
   return (
     <main className="relative min-h-screen w-full overflow-hidden flex flex-col justify-between">
-      {/* === FOND MATRIX === */}
+
       <canvas id="matrixCanvas" className="absolute inset-0 z-0"></canvas>
 
-      {/* === INTRO === */}
       <div className="z-20 w-full flex justify-center items-center mt-[20vh] text-center">
         <div className="glass-intro text-2xl md:text-3xl text-green-400 fade-in">
           {introText}
@@ -66,7 +64,6 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* === TERMINAL EN BAS === */}
       <div className="z-20 w-full fixed bottom-0 left-0 glass-terminal">
         <Terminal />
       </div>

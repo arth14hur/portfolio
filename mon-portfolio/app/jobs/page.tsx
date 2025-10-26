@@ -18,16 +18,15 @@ const jobExperiences = [
     period: 'Avril 2023 - Juin 2024',
     location: 'Torigny-sur-Vire',
     description: 'Apprentissage en vue de l’obtention d’un BTSA GDEA.',
-    keyAchievements: [
-      'Conception et réalisation d’un outil de A à Z.',
-    ],
+    keyAchievements: ['Conception et réalisation d’un outil de A à Z.'],
     techStack: ['Bases de programmation de machines industrielles'],
   },
 ];
 
 const currentStatus = {
   seeking: true,
-  statusText: 'Actuellement en recherche active d’opportunités d’alternance dans les domaines de l’IT.',
+  statusText:
+    'Actuellement en recherche active d’opportunités d’alternance dans les domaines de l’IT.',
   contactLink: '/contact',
 };
 
@@ -36,7 +35,10 @@ const JobsPage: NextPage = () => {
     <>
       <Head>
         <title>Parcours professionnel - Arthur Daguier</title>
-        <meta name="description" content="Découvrez le parcours professionnel et les expériences d’Arthur Daguier." />
+        <meta
+          name="description"
+          content="Découvrez le parcours professionnel et les expériences d’Arthur Daguier."
+        />
       </Head>
 
       <div className="relative bg-gradient-to-br from-terminal-dark via-black to-neutral-950 min-h-screen text-terminal-light-gray font-mono p-6 sm:p-10 lg:p-16 overflow-x-hidden">
@@ -103,7 +105,9 @@ const JobsPage: NextPage = () => {
 
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-lg text-green-500 mb-2 font-medium">// Description du poste</h3>
+                    <h3 className="text-lg text-green-500 mb-2 font-medium">
+                      Description du poste
+                    </h3>
                     <p className="text-neutral-300 leading-relaxed font-light whitespace-pre-line">
                       {job.description}
                     </p>
@@ -111,7 +115,9 @@ const JobsPage: NextPage = () => {
 
                   {job.keyAchievements && job.keyAchievements.length > 0 && (
                     <div>
-                      <h3 className="text-lg text-green-500 mb-2 font-medium">// Réalisations clés</h3>
+                      <h3 className="text-lg text-green-500 mb-2 font-medium">
+                        Réalisations clés
+                      </h3>
                       <ul className="space-y-2 text-neutral-300 font-light list-inside">
                         {job.keyAchievements.map((achievement, index) => (
                           <li key={index} className="flex items-start gap-2">
@@ -125,7 +131,9 @@ const JobsPage: NextPage = () => {
 
                   {job.techStack && job.techStack.length > 0 && (
                     <div>
-                      <h3 className="text-lg text-green-500 mb-2 font-medium">// Environnement technique</h3>
+                      <h3 className="text-lg text-green-500 mb-2 font-medium">
+                        Environnement technique
+                      </h3>
                       <div className="flex flex-wrap gap-2">
                         {job.techStack.map((tech) => (
                           <span
