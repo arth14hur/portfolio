@@ -99,12 +99,16 @@ const PortfolioPage: NextPage = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project) => (
-                <Link key={project.id} href={`/projets/${project.id}`} className="flex">
+                <Link
+                  key={project.id}
+                  href={`/projets/${project.id}`}
+                  className="flex"
+                >
                   <article
                     className="relative p-6 border border-green-800 bg-neutral-900/40 rounded-md
-                               hover:bg-neutral-800/60 hover:border-terminal-green
-                               transition-all duration-300 transform hover:scale-[1.03]
-                               hover:shadow-xl hover:shadow-terminal-green/10 group flex flex-col w-full"
+                 hover:bg-neutral-800/60 hover:border-terminal-green
+                 transition-all duration-300 transform hover:scale-[1.03]
+                 hover:shadow-xl hover:shadow-terminal-green/10 group flex flex-col w-full"
                   >
                     <h3 className="text-2xl font-medium text-terminal-green mb-3 flex items-center gap-2">
                       <span className="text-green-600 select-none">&gt;</span>
@@ -117,6 +121,7 @@ const PortfolioPage: NextPage = () => {
                   </article>
                 </Link>
               ))}
+
             </div>
           </main>
 
