@@ -59,13 +59,11 @@ export default function HomePage() {
 
   return (
     <div className="relative flex flex-col items-center justify-center h-screen bg-black overflow-hidden">
-      {/* Matrix background */}
+
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full z-0"></canvas>
 
-      {/* Fond flou entre le fond et le contenu */}
       <div className="absolute inset-0 z-0 bg-black/50 backdrop-blur-3xl"></div>
 
-      {/* Contenu */}
       <div className="relative z-10 flex flex-col items-center justify-center">
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
@@ -76,7 +74,6 @@ export default function HomePage() {
           CHOOSE YOUR REALITY
         </motion.h1>
 
-        {/* Espacement réduit (gap-20) */}
         <div className="flex flex-col gap-20 md:gap-24 items-center">
           <motion.button
             onClick={() => router.push("/normal")}
@@ -89,12 +86,11 @@ export default function HomePage() {
             </span>
           </motion.button>
 
-          {/* Bouton rouge visible uniquement sur desktop (md) */}
           <motion.button
             onClick={() => router.push("/terminal")}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="w-56 h-56 md:w-64 md:h-64 rounded-full bg-red-500 shadow-lg shadow-red-500/50 hover:shadow-red-400/80 transition-all flex items-center justify-center px-6 py-6 glow-animation hidden md:flex"
+            className="w-56 h-56 md:w-64 md:h-64 rounded-full bg-red-500 shadow-lg shadow-red-500/50 hover:shadow-red-400/80 transition-all hidden md:flex"
           >
             <span className="text-white font-bold text-5xl md:text-6xl text-center leading-tight">
               RED
