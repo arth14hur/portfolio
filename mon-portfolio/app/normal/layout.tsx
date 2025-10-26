@@ -1,4 +1,4 @@
-// layout.tsx (pour App Router)
+
 import { Space_Mono } from 'next/font/google';
 
 const spaceMono = Space_Mono({ 

@@ -20,7 +20,7 @@ export default function HomePage() {
     canvas.height = height;
 
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    const fontSize = 18; // un peu plus grand pour matrix
+    const fontSize = 18;
     const columns = Math.floor(width / fontSize);
     const drops: number[] = Array(columns).fill(1);
 
@@ -76,7 +76,8 @@ export default function HomePage() {
           CHOOSE YOUR REALITY
         </motion.h1>
 
-        <div className="flex flex-col gap-40 md:gap-48 items-center">
+        {/* Espacement réduit (gap-20) */}
+        <div className="flex flex-col gap-20 md:gap-24 items-center">
           <motion.button
             onClick={() => router.push("/normal")}
             whileHover={{ scale: 1.1 }}
@@ -88,11 +89,12 @@ export default function HomePage() {
             </span>
           </motion.button>
 
+          {/* Bouton rouge visible uniquement sur desktop (md) */}
           <motion.button
             onClick={() => router.push("/terminal")}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="w-56 h-56 md:w-64 md:h-64 rounded-full bg-red-500 shadow-lg shadow-red-500/50 hover:shadow-red-400/80 transition-all flex items-center justify-center px-6 py-6 glow-animation"
+            className="w-56 h-56 md:w-64 md:h-64 rounded-full bg-red-500 shadow-lg shadow-red-500/50 hover:shadow-red-400/80 transition-all flex items-center justify-center px-6 py-6 glow-animation hidden md:flex"
           >
             <span className="text-white font-bold text-5xl md:text-6xl text-center leading-tight">
               RED

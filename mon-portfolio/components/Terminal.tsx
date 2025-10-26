@@ -20,97 +20,90 @@ export default function Terminal() {
     switch (command) {
       case "help":
         return [
-          "Commandes disponibles:",
-          "help - montre ce message",
-          "about - A propos de moi",
+          "Commandes disponibles :",
+          "help - affiche ce message",
+          "about - à propos de moi",
           "projects - liste des projets",
           "contact - comment me contacter",
-          "Jobs - liste des postes occuper",
-          "portfolio - détail de ce projet",
-          "Joblinker - détail de ce projet",
-          "Hangman - détail de ce projet",
-          "techno - liste des techno que j'ai déjà utiliser",
-          "skills - liste de mes compétances",
-          "clear - supprimer l'historique",
+          "jobs - liste des postes occupés",
+          "portfolio - détails de ce projet",
+          "joblinker - détails de ce projet",
+          "hangman - détails de ce projet",
+          "techno - liste des technologies que j’ai déjà utilisées",
+          "skills - liste de mes compétences",
+          "clear - efface l’historique",
         ];
+
       case "about":
         return [
-          "Je Daguier Arthur étudiant en préMSC à Epitech",
-          "J'ai la volonté d'apprendre un maximum de choses au tour de l'informatique",
+          "Je suis Daguier Arthur, étudiant en pré-MSC à Epitech.",
+          "J’ai la volonté d’apprendre un maximum de choses autour de l’informatique.",
         ];
+
       case "projects":
         return [
-          "Projets récents:",
+          "Projets récents :",
           "- Portfolio Website",
           "- Jeu 2D en Java",
-          "- Joblinker site web",
-          "- Hangman game",
-          
+          "- Joblinker (site web)",
+          "- Hangman (jeu du pendu)",
         ];
+
       case "contact":
         return [
-          "Me contacter",
-          "Email: arthur.daguier@epitech.eu",
-          "GitHub: arth14hur",
+          "Me contacter :",
+          "Email : arthur.daguier@epitech.eu",
+          "GitHub : arth14hur",
         ];
-        case "Jobs":
+
+      case "jobs":
         return [
-          "Expériences pros",
-          "Chaufeur livreur",
-          "entreprise: Feeling Express",
+          "Expériences professionnelles :",
+          "Chauffeur-livreur",
+          "Entreprise : Feeling Express",
           "",
-          "apprentis mécanicien agricole",
-          "entreprise: Atelier Chardine",
+          "Apprenti mécanicien agricole",
+          "Entreprise : Atelier Chardine",
         ];
-        case "portfolio":
+
+      case "portfolio":
+        return ["C’est ce site !", "Je vous invite à l’explorer."];
+
+      case "joblinker":
         return [
-          "C'est ce site",
-          "Je vous invite à l'explorer",
+          "Projet web : Joblinker",
+          "Jobboard réalisé en groupe pour apprendre l’organisation de projet.",
+          "Utilisation de Git et GitHub en collaboration.",
         ];
-        case "Joblinker":
+
+      case "hangman":
         return [
-          "Projet web",
-          "jobboard fais en groupe pour nous apprendre l'organisation",
-          "utilisation de git et github en groupe",
+          "Mini-projet en Python :",
+          "Jeu du pendu, premier projet en Python.",
         ];
-        case "Hangman":
+
+      case "techno":
         return [
-          "Mini projet en python",
-          "jeu du pendu en python en tant que premier projet",
+          "Mes technologies :",
+          "Python, Java, JavaScript, TypeScript, PostgreSQL, Node.js, Express, Next.js",
         ];
-        case "techno":
+
+      case "skills":
         return [
-          "Mes technos",
-          "Python, Java",
-          "Javascript, Typescript, Postgresql, NodeJs, Express, Next"
+          "Mes compétences :",
+          "Relation client, sens du contact, rigueur,",
+          "Gestion d’entreprise, traitement des demandes clients.",
         ];
-        case "techno":
-        return [
-          "Mes compétances",
-          "relation client, rapport humain, rigueur",
-          "gestion d'entreprise, gestion demandes clients"
-        ];
+
       case "clear":
         setHistory([]);
         setOutputs([]);
         return [];
+
       default:
-        return [`❓ Command not found: '${command}'. Type 'help' for list.`];
+        return [`❓ Commande inconnue : '${command}'. Tapez 'help' pour la liste.`];
     }
   };
-
-  const typeLine = (text: string, delay = 20): Promise<string> =>
-    new Promise((resolve) => {
-      let i = 0;
-      const interval = setInterval(() => {
-        if (i < text.length) {
-          resolve(text.slice(0, i + 1));
-          i++;
-        } else {
-          clearInterval(interval);
-        }
-      }, delay);
-    });
 
   const processCommand = async (cmd: string) => {
     setIsProcessing(true);
@@ -118,7 +111,6 @@ export default function Terminal() {
 
     setHistory((prev) => [cmd, ...prev]);
     setOutputs((prev) => [[], ...prev]);
-
 
     for (let i = 0; i < lines.length; i++) {
       let typed = "";
@@ -161,7 +153,6 @@ export default function Terminal() {
       onClick={() => terminalRef.current?.focus()}
       className="terminal-container no-outline select-none flex flex-col justify-end"
     >
-
       <div className="flex flex-col-reverse overflow-y-auto flex-grow space-y-2 space-y-reverse">
         {history.map((cmd, idx) => (
           <div key={idx}>
@@ -175,7 +166,6 @@ export default function Terminal() {
           </div>
         ))}
       </div>
-
 
       <div className="input-line mt-2 border-t border-green-800 pt-2 flex items-center">
         <span className="text-green-400">&gt;&nbsp;</span>
